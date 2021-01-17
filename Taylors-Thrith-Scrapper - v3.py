@@ -104,6 +104,33 @@ for pages in total_pages:
 
 
 
+                        p = 1
+                        urllist = []
+                        for Image in page_soup.findAll('img'):
+                            p = p + 1
+                            if p == 1  or p == 3 or p == 5 or p == 7 or p == 9 or p == 11:
+
+
+
+                                temp = Image.get('data-original-src') if Image.get('data-original-src') else ''
+                                print(temp)
+                                temp1 = 'http://' + temp
+                                urllist.append(temp1)
+                                print(urllist)
+                            '''
+                            if temp != '':
+                                if temp != '//cdn.shopify.com/s/files/1/0380/3099/9685/files/TT_Logo_Palm_350x.jpg?v=1599171923':
+
+                                temp = Image.get('src') if Image.get('src') else ''
+                                imageURL = temp[2:]
+                                imageURL = imageURL.replace('620x.', '1280x.')
+    
+                                print(imageURL)
+                                imageURL = 'http://' + imageURL
+                                urllist.append(imageURL)
+    
+                                break
+                            '''
 
 
                         #Searches whole description and breaks up into paragraphs
@@ -188,7 +215,11 @@ for pages in total_pages:
 
                         print(str(pagetitle))
                         StoreItemNum = StoreItemNum + 1
-                        f.write(str(StoreItemNum) + StoreCode + "," + pagetitle[0] + " / " + size + " / " + Colour  + "," + "FALSE" + "," + price + "," + str(Listing_price_final) + "," + size + "," + Measurements + "," + Colour + ","  + brand + "," + para1 + '<br>' + para2 + '<br>' + para3 + '<br>' + para4 + '<br>' + para5 + "," + my_url + '\n')
+
+
+                        print(urllist)
+                        ''
+                        f.write(str(StoreItemNum) + StoreCode + "," + pagetitle[0] + " / " + size + " / " + Colour  + "," + "FALSE" + "," + price + "," + str(Listing_price_final) + "," + size + "," + Measurements + "," + Colour + ","  + brand + "," + para1 + '<br>' + para2 + '<br>' + para3 + '<br>' + para4 + '<br>' + para5 +  "," + urllist + "," + my_url + '\n')
 
                     else:
                         print('Sold Out Item')
