@@ -9,28 +9,25 @@ import time
 
 
 
-'''
-Currently Scraped pages - 
-https://www.taylorsthrift.com/collections/sale-items
-'''
+
 
 #1. Name the file (Keep 'W' if new excel / change to 'A' if adding)
 Csvfile = 'Taylors-Thrith-Hoodies+Sweats.csv'
-f = open(Csvfile, 'w')
+f = open(Csvfile, 'a')
 
 
 ##########################################################################################################
 #create headers for file this will allow you to see where new appended items are (Delete header on run)###
 ##########################################################################################################
-headers = 'Image Code,Title,Uploaded,Price,Listing Price,size,Measurements,Colour,Brand,Description,Item Url\n'
-f.write(headers)
+headers = 'Code,Item Catagory,Title,Uploaded,Price,Listing Price,size,Measurements,Colour,Brand,Description, Image Urls, Item Url\n'
+#f.write(headers)
 
 
 
 ########################################
 #Change this if total pages are larger##
 ########################################
-total_pages = [1]
+total_pages = [1,2]
 
 
 
@@ -39,8 +36,8 @@ total_pages = [1]
 ##########################################################################################################
 
 
-Items = 0
 
+Items = 83
 
 StoreCode = 'TT'
 StoreItemNum = Items
@@ -117,20 +114,7 @@ for pages in total_pages:
                                 temp1 = 'http://' + temp
                                 urllist.append(temp1)
                                 print(urllist)
-                            '''
-                            if temp != '':
-                                if temp != '//cdn.shopify.com/s/files/1/0380/3099/9685/files/TT_Logo_Palm_350x.jpg?v=1599171923':
 
-                                temp = Image.get('src') if Image.get('src') else ''
-                                imageURL = temp[2:]
-                                imageURL = imageURL.replace('620x.', '1280x.')
-    
-                                print(imageURL)
-                                imageURL = 'http://' + imageURL
-                                urllist.append(imageURL)
-    
-                                break
-                            '''
 
 
                         #Searches whole description and breaks up into paragraphs
@@ -140,6 +124,8 @@ for pages in total_pages:
                         size = paragraphs[0].text
                         Measurements = paragraphs[2].text
                         Colour = paragraphs[3].text
+
+
 
                         para1 = paragraphs[0].text
                         para2 = paragraphs[1].text
@@ -157,6 +143,12 @@ for pages in total_pages:
                         Colour = Colour.replace('Colour:', '')
                         Colour = Colour.replace('|', '/')
 
+                        para1 = para1.replace(',','')
+                        para2 = para2.replace(',', '')
+                        para3 = para3.replace(',', '')
+                        para4 = para4.replace(',', '')
+                        para5 = para5.replace(',', '')
+
 
 
                         pagetitle = pagetitle.replace('/','-')
@@ -167,7 +159,6 @@ for pages in total_pages:
                         pagetitle = pagetitle.replace('~', '/')
                         pagetitle = pagetitle.split("_", 1)
 
-                        print('final123')
                         # Error traps if the item is on sale or not. Draws the lowest price
                         price = page_soup.find('span', { 'class': 'ProductMeta__Price Price Price--highlight Text--subdued u-h4'}).text if page_soup.find('span', {'class': 'ProductMeta__Price Price Price--highlight Text--subdued u-h4'}) else ''
                         if price == '':
@@ -217,9 +208,10 @@ for pages in total_pages:
                         StoreItemNum = StoreItemNum + 1
 
 
+
+                        urllist = '|'.join(urllist)
                         print(urllist)
-                        ''
-                        f.write(str(StoreItemNum) + StoreCode + "," + pagetitle[0] + " / " + size + " / " + Colour  + "," + "FALSE" + "," + price + "," + str(Listing_price_final) + "," + size + "," + Measurements + "," + Colour + ","  + brand + "," + para1 + '<br>' + para2 + '<br>' + para3 + '<br>' + para4 + '<br>' + para5 +  "," + urllist + "," + my_url + '\n')
+                        f.write(str(StoreItemNum) + StoreCode + "," + " " + "," + pagetitle[0] + " / " + size + " / " + Colour + " / " + str(StoreItemNum) + StoreCode + "," + "FALSE" + "," + price + "," + str(Listing_price_final) + "," + size + "," + Measurements + "," + Colour + ","  + brand + "," + para1 + '<br>' + para2 + '<br>' + para3 + '<br>' + para4 + '<br>' + para5 +  "," + urllist + "," + my_url + '\n')
 
                     else:
                         print('Sold Out Item')
