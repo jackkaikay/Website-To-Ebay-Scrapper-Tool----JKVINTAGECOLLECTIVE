@@ -12,7 +12,7 @@ import time
 
 
 #1. Name the file (Keep 'W' if new excel / change to 'A' if adding)
-Csvfile = 'Taylors-Thrith-Hoodies+Sweats.csv'
+Csvfile = 'Taylors-Thrith-Hoodies+Sweats123123123.csv'
 f = open(Csvfile, 'a')
 
 
@@ -111,7 +111,7 @@ for pages in total_pages:
 
                                 temp = Image.get('data-original-src') if Image.get('data-original-src') else ''
                                 print(temp)
-                                temp1 = 'http://' + temp
+                                temp1 = 'http:' + temp
                                 urllist.append(temp1)
                                 print(urllist)
 
