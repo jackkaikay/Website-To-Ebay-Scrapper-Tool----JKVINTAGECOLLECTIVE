@@ -15,7 +15,7 @@ sold_items = []
 x = 0
 for items in df.index:
     my_url = df['Item Url'][x]
-    x = x + 1
+
 
     try:
         # Gets Webpage from url
@@ -36,10 +36,10 @@ for items in df.index:
             print('ITEM SOLD!!!!--------------------------------------------------')
             print('ITEM SOLD!!!!--------------------------------------------------')
             sold_items.append(df['Code'][x])
-
+            x = x + 1
         else:
              print(my_url)
-
+             x = x + 1
     except:
         print('ITEM NOT 505!!!!--------------------------------------------------')
         print('ITEM NOT 505!!!!--------------------------------------------------')
@@ -47,7 +47,7 @@ for items in df.index:
         print('ITEM NOT 505!!!!--------------------------------------------------')
         print('ITEM NOT 505!!!!--------------------------------------------------')
         sold_items.append(df['Code'][x])
-
+        x = x + 1
 
 print(sold_items)
 
