@@ -35,7 +35,7 @@ for items in df.index:
             print(my_url)
             print('ITEM SOLD!!!!--------------------------------------------------')
             print('ITEM SOLD!!!!--------------------------------------------------')
-            sold_items.append(df['Item/Page Title'][x])
+            sold_items.append(df['Code'][x])
 
         else:
              print(my_url)
@@ -46,6 +46,8 @@ for items in df.index:
         print(my_url)
         print('ITEM NOT 505!!!!--------------------------------------------------')
         print('ITEM NOT 505!!!!--------------------------------------------------')
+        sold_items.append(df['Code'][x])
+
 
 print(sold_items)
 
