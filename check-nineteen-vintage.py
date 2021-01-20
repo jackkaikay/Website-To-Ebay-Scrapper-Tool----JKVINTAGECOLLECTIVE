@@ -7,7 +7,7 @@ import os
 import pandas as pd
 
 #change .csv file name for other listings
-df = pd.read_csv('Nineteen-Vintage.csv', encoding='latin1')
+df = pd.read_csv('Nineteen-Vintage-Inventory.csv', encoding='latin1')
 
 
 

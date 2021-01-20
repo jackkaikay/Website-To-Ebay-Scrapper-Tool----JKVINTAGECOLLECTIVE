@@ -8,7 +8,7 @@ import pandas as pd
 import time
 
 
-total_pages = [1]
+total_pages = [1,2,3,4,5,6,7]
 
 
 Code = 0
@@ -133,25 +133,19 @@ for pages in total_pages:
 
                         p = 0
                         urllist = []
-                        for Image in page_soup.findAll('img', attrs={'class': 'lazyloaded'}):
+                        for Image in page_soup.findAll('img'):
 
-                            temp = Image.get('src') if Image.get('src') else ''
+                            temp = Image.get('data-photoswipe-src') if Image.get('data-photoswipe-src') else ''
                             print(temp)
-
-
                             imageURL = temp[2:]
 
                             imageURL = imageURL.replace('900x.', '1280x.')
                             imageURL = imageURL.replace('620x.', '1280x.')
 
-
-                            print(imageURL)
-
                             urllist.append(imageURL)
 
                             p = p + 1
-                            print(p)
-                            if p == 3:
+                            if p == 7:
                                 break
 
 
@@ -160,7 +154,11 @@ for pages in total_pages:
 
                         item_name = item_name.replace(',', '')
                         colour = colour.strip()
-                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store  + str(y) +"," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(sizing) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff  + '<br>' + sizing + "," + str(urllist[0]) + '|' + str(urllist[1]) + '|' + str(urllist[2]) + ',' +  my_url + '\n')
+                        urllist = '|'.join(urllist)
+                        urllist = urllist.replace('|||', '')
+                        urllist = urllist[:-1]
+
+                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store  + str(y) +"," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(sizing) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff  + '<br>' + sizing + "," + urllist + ',' +  my_url + '\n')
 
 
 
@@ -237,26 +235,30 @@ for pages in total_pages:
 
                         p = 0
                         urllist = []
-                        for Image in page_soup.findAll('img', attrs={'class': 'lazyloaded'}):
+                        for Image in page_soup.findAll('img'):
 
-                            temp = Image.get('src') if Image.get('src') else ''
+                            temp = Image.get('data-photoswipe-src') if Image.get('data-photoswipe-src') else ''
+                            print(temp)
                             imageURL = temp[2:]
+
+                            imageURL = imageURL.replace('900x.', '1280x.')
                             imageURL = imageURL.replace('620x.', '1280x.')
-
-
 
                             urllist.append(imageURL)
 
                             p = p + 1
-
-                            if p == 3:
+                            if p == 7:
                                 break
 
 
 
                         item_name = item_name.replace(',', '')
                         colour = colour.strip()
-                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store + str(y) + "," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(size) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff + '<br>' + size +  "," + str(urllist[0]) + '|' + str(urllist[1]) + '|' + str(urllist[2]) + ',' +  my_url + '\n')
+                        urllist = '|'.join(urllist)
+                        urllist = urllist.replace('|||', '')
+                        urllist = urllist[:-1]
+
+                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store + str(y) + "," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(size) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff + '<br>' + size +  "," + urllist + ',' +  my_url + '\n')
 
 
 
