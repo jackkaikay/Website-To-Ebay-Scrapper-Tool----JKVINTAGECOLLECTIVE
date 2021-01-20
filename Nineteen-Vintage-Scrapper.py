@@ -18,7 +18,7 @@ Store = 'NV'
 y = Code
 
 
-Csvfile = 'Nineteen-Vintage.csv'
+Csvfile = 'Nineteen-Vintage-Inventory.csv'
 f = open(Csvfile, 'w')
 headers = 'Image Code,Uploaded,Item/Page Title,Price,Listing Price,colour,Size,Condition,Brand,Description,Imageurls,Item Url\n'
 f.write(headers)
@@ -129,27 +129,28 @@ for pages in total_pages:
                             Listing_price_final = Listing_price_final + 3.50
                             print(str(Listing_price_final))
 
-
+                        print('check')
 
                         p = 0
                         urllist = []
                         for Image in page_soup.findAll('img', attrs={'class': 'lazyloaded'}):
 
                             temp = Image.get('src') if Image.get('src') else ''
+                            print(temp)
+
+
                             imageURL = temp[2:]
+
+                            imageURL = imageURL.replace('900x.', '1280x.')
                             imageURL = imageURL.replace('620x.', '1280x.')
 
 
-                            imageURL = 'http://' + imageURL
+                            print(imageURL)
+
                             urllist.append(imageURL)
 
-
-
                             p = p + 1
-
-
-
-
+                            print(p)
                             if p == 3:
                                 break
 
