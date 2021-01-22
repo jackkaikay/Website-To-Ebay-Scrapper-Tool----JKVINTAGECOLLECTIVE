@@ -30,13 +30,16 @@ for items in df.index:
         # Check if item is sold
         button = page_soup.find('button', {'class': 'btn btn--full add-to-cart'})
 
-        if button.text == 'Sold Out':
+
+
+
+        if button.text.strip() == 'Sold Out':
             print('ITEM SOLD!!!!--------------------------------------------------')
             print('ITEM SOLD!!!!--------------------------------------------------')
             print(my_url)
             print('ITEM SOLD!!!!--------------------------------------------------')
             print('ITEM SOLD!!!!--------------------------------------------------')
-            sold_items.append(df['Code'][x])
+            sold_items.append(df['Item/Page Title'][x])
             x = x + 1
 
         else:
@@ -49,7 +52,7 @@ for items in df.index:
         print(my_url)
         print('ITEM NOT 505!!!!--------------------------------------------------')
         print('ITEM NOT 505!!!!--------------------------------------------------')
-        sold_items.append(df['Code'][x])
+        sold_items.append(df['Item/Page Title'][x])
         x = x + 1
 
 

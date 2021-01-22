@@ -8,7 +8,7 @@ import pandas as pd
 import time
 
 
-total_pages = [1,2,3,4,5,6,7]
+total_pages = [1,2,3,4,5,6,7,8,9,10,11]
 
 
 Code = 0
@@ -158,7 +158,7 @@ for pages in total_pages:
                         urllist = urllist.replace('|||', '')
                         urllist = urllist[:-1]
 
-                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store  + str(y) +"," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(sizing) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff  + '<br>' + sizing + "," + urllist + ',' +  my_url + '\n')
+                        f.write(item_name + " / " + colour + " / " + str(y) + Store  + "," + "FALSE" + "," + Store  + str(y) +"," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(sizing) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff  + '<br>' + sizing + "," + urllist + ',' +  my_url + '\n')
 
 
 
@@ -258,7 +258,7 @@ for pages in total_pages:
                         urllist = urllist.replace('|||', '')
                         urllist = urllist[:-1]
 
-                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + Store + str(y) + "," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(size) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff + '<br>' + size +  "," + urllist + ',' +  my_url + '\n')
+                        f.write(item_name + " / " + colour + " / " + Store + str(y) + "," + "FALSE" + "," + str(y) + Store + "," + price + "," + str(Listing_price_final) + "," + str(colour) + "," + str(size) + "," + str(condition) + "," + brand + "," + item_name + " / " + colour + '<br>' + 'Pit to Pit (Inches): ' + pit_pit + '<br> Shoulder to Waist (Inches): '  + shoulder_waist + '<br> Shoulder to Cuff (Inches): ' + shoulder_cuff + '<br>' + size +  "," + urllist + ',' +  my_url + '\n')
 
 
 
