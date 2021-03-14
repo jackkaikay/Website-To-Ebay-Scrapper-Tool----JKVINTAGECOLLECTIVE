@@ -52,7 +52,8 @@ def link_missed(link):
 
 def add_code(data):
     for ind,prod in enumerate(data):
-        prod['Code'] = str(ind + 1) + "CLOAK"
+        prod['SKU'] = str(ind + 1)
+        prod['Code'] = str(ind + 1) + "CLOAK-W"
         prod['Title'] = prod['Title'] + ' ' + prod['Code']
     
     return data
@@ -79,13 +80,17 @@ def scrape_item_data(link_data):
         return False
     product_name = soup.find_all('h1',{'class':'product-single__title'})[0].text.strip()
     brand = selector(brand_list,product_name)
-    if not brand:
+    if not brand or brand.lower().__contains__('large'):
         brand = 'Unbranded'
     color = selector(color_list,product_name)
     if not color:
         color = product_name.split()[-2]
     price = soup.find_all('span',{'class':'money'})[0].text.strip()
-    listing_price = float(price[1:]) * 1.5
+    if float(price[1:]) > 50:
+        listing_price = float(price[1:]) * 1.5
+    else:
+        listing_price = float(price[1:]) * 1.7
+
     try:
         size = soup.find(id='SingleOptionSelector-0').option.attrs['value']
     except Exception:
@@ -96,8 +101,14 @@ def scrape_item_data(link_data):
 
     text_to_remove = 'Please check measurements and product description carefully.\n\xa0\nVintage & Sustainable Clothing'
     description = ((soup.find_all('div',{'class':'product-single__description'})[0].text.strip().replace(text_to_remove,"")).replace('\xa0','<br>')).replace('Description',"")
+    description = description.replace('\n',' ')
+    des_temp = description.split(' ')
+    while des_temp.count('') != 0:
+        des_temp.remove('')
+    description = " ".join(des_temp)
     product_list.append(
         {
+            'SKU' : '', 
             'Code' : '',
             'Item Cat' : cat,
             'Title' : product_name,
@@ -157,16 +168,16 @@ def scrap_item_datas_in_thread(link_list):
 
 if __name__ == "__main__":
     product_list = []
-    links = ['https://www.cloakvintage.com/collections/sweaters/Mens','https://www.cloakvintage.com/collections/jackets-coats/Mens']
+    links = ['https://www.cloakvintage.com/collections/sweaters/Ladies',
+             'https://www.cloakvintage.com/collections/jackets-coats/Ladies']
 
-    
     item_cat_list = {
-        'sweaters':'155183',
-        'jackets-coats':'185702'
+        'sweaters': '155226',
+        'jackets-coats': '185079'
     }
     Uploaded = False
     base_url = 'https://www.cloakvintage.com/'
-    output_filename = r'cloth details.xlsx'
+    output_filename = r'Cloak Scrape - Women.xlsx'
 
     link_list = []
 
