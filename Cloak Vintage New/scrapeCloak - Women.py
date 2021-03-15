@@ -79,6 +79,8 @@ def scrape_item_data(link_data):
         print(f"unable to fetch link {link}")
         return False
     product_name = soup.find_all('h1',{'class':'product-single__title'})[0].text.strip()
+    product_name = product_name.replace('Vintage', '')
+
     brand = selector(brand_list,product_name)
     if not brand or brand.lower().__contains__('large'):
         brand = 'Unbranded'
@@ -86,10 +88,35 @@ def scrape_item_data(link_data):
     if not color:
         color = product_name.split()[-2]
     price = soup.find_all('span',{'class':'money'})[0].text.strip()
-    if float(price[1:]) > 50:
-        listing_price = float(price[1:]) * 1.5
-    else:
+
+    if float(price[1:]) < 10:
         listing_price = float(price[1:]) * 1.7
+        listing_price = listing_price + 3.50
+
+    if float(price[1:]) > 10 and float(price[1:]) < 20:
+        listing_price = float(price[1:]) * 1.6
+        listing_price = listing_price + 3.50
+
+    if float(price[1:]) >= 20 and float(price[1:]) < 30:
+        listing_price = float(price[1:]) * 1.5
+        listing_price = listing_price + 3.50
+
+    if float(price[1:]) >= 30 and float(price[1:]) < 40:
+        listing_price = float(price[1:]) * 1.45
+        listing_price = listing_price + 3.50
+
+    if float(price[1:]) >= 40 and float(price[1:]) < 50:
+        listing_price = float(price[1:]) * 1.45
+        listing_price = listing_price + 3.50
+
+    if float(price[1:]) >= 50 and float(price[1:]) < 60:
+        listing_price = float(price[1:]) * 1.4
+
+    if float(price[1:]) >= 60 and float(price[1:]) < 70:
+        listing_price = float(price[1:]) * 1.35
+
+    if float(price[1:]) >= 70:
+        listing_price = float(price[1:]) * 1.3
 
     try:
         size = soup.find(id='SingleOptionSelector-0').option.attrs['value']
@@ -177,7 +204,7 @@ if __name__ == "__main__":
     }
     Uploaded = False
     base_url = 'https://www.cloakvintage.com/'
-    output_filename = r'Cloak Scrape - Women.xlsx'
+    output_filename = r'Cloak Vintage Inventory-Women.xlsx'
 
     link_list = []
 

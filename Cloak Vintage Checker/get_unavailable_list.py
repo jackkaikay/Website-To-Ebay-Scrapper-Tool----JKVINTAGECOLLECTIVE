@@ -47,7 +47,7 @@ def get_unavailable_items_code():
 
 
 if __name__ == "__main__":
-    input_file = r"C:\Users\jackk\Desktop\GITHUB\EbayScraper\cloth data scraper Dev\cloth details.xlsx"
+    input_file = r"C:\Users\jackk\Desktop\GITHUB\EbayScraper\Cloak Vintage New\Cloak 100.xlsx"
 
     out_list,out_string = get_unavailable_items_code()
     print(out_list)

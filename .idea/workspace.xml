@@ -4,12 +4,9 @@
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Automator_template1 - Copy.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Scraper/cloth details.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Scraper/missing_link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Scraper/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Scraper/scrape.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ebay Upload Template.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Ebay Upload Template.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/get_unavailable_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/get_unavailable_list.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,28 +35,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../VectorCRMstart" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.scrapedev1">
-    <configuration name="Scrape -Womens" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="EbayScraper" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Scraper" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Scraper/Scrape -Womens.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.scrapeCloak - Mens">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -81,7 +57,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scrape (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="get_unavailable_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,11 +65,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Scraper" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Checker" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Scraper/scrape.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Checker/get_unavailable_list.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -115,6 +91,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage New/scrape.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="scrapeCloak - Mens" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EbayScraper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage New" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,19 +164,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.scrape (2)" />
-      <item itemvalue="Python.Scrape -Womens" />
       <item itemvalue="Python.scrape (3)" />
       <item itemvalue="Python.scrapedev1" />
       <item itemvalue="Python.scrapedev2" />
+      <item itemvalue="Python.scrapeCloak - Mens" />
+      <item itemvalue="Python.get_unavailable_list" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.scrapeCloak - Mens" />
+        <item itemvalue="Python.get_unavailable_list" />
         <item itemvalue="Python.scrapedev1" />
         <item itemvalue="Python.scrapedev2" />
         <item itemvalue="Python.scrape (3)" />
-        <item itemvalue="Python.Scrape -Womens" />
-        <item itemvalue="Python.scrape (2)" />
       </list>
     </recent_temporary>
   </component>
