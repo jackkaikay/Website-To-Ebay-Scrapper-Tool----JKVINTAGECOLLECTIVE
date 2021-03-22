@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Selinium-AutoChecker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
