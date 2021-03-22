@@ -53,7 +53,7 @@ def link_missed(link):
 def add_code(data):
     for ind,prod in enumerate(data):
         prod['SKU'] = str(ind + 1)
-        prod['Code'] = str(ind + 1) + "CLOAK-W"
+        prod['Code'] = str(ind + 1) + "CW"
         prod['Title'] = prod['Title'] + ' ' + prod['Code']
     
     return data
@@ -111,12 +111,12 @@ def scrape_item_data(link_data):
 
     if float(price[1:]) >= 50 and float(price[1:]) < 60:
         listing_price = float(price[1:]) * 1.4
-
+        listing_price = listing_price + 3.50
     if float(price[1:]) >= 60 and float(price[1:]) < 70:
-        listing_price = float(price[1:]) * 1.35
-
+        listing_price = float(price[1:]) * 1.4
+        listing_price = listing_price + 3.50
     if float(price[1:]) >= 70:
-        listing_price = float(price[1:]) * 1.3
+        listing_price = float(price[1:]) * 1.35
 
     try:
         size = soup.find(id='SingleOptionSelector-0').option.attrs['value']

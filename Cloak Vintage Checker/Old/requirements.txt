@@ -1,0 +1,7 @@
+pandas
+openpyxl
+xlrd
+requests
+bs4
+google-auth-oauthlib
+google_spreadsheet
