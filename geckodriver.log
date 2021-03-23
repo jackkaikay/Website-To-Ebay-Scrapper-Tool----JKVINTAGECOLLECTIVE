@@ -1,0 +1,86 @@
+1616454237949	geckodriver	INFO	Listening on 127.0.0.1:51006
+1616454240990	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofilejSZ1Lt"
+1616454244847	geckodriver	INFO	Listening on 127.0.0.1:51017
+1616454247909	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileGvlJBh"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616454253263	Marionette	INFO	Listening on port 51027
+1616454254242	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://gre/modules/UrlClassifierListManager.jsm, line 691: TypeError: this.tablesData[table] is undefined
+1616454724672	geckodriver	INFO	Listening on 127.0.0.1:51154
+1616454727733	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileollV6s"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616454731448	Marionette	INFO	Listening on port 51162
+1616454731904	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: resource://activity-stream/lib/ASRouter.jsm, line 988: NS_ERROR_ILLEGAL_VALUE: Component returned failure code: 0x80070057 (NS_ERROR_ILLEGAL_VALUE) [nsIObserverService.removeObserver]
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616454794261	geckodriver	INFO	Listening on 127.0.0.1:51242
+1616454797352	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileECwOO5"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1616454801114	Marionette	INFO	Listening on port 51250
+1616454801536	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616454811293	Marionette	INFO	Stopped listening on port 51250
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1616454826165	geckodriver	INFO	Listening on 127.0.0.1:51324
+1616454829860	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileH6vuVr"
+1616454831623	Marionette	INFO	Listening on port 51333
+1616454831912	Marionette	WARN	TLS certificate errors will be ignored for this session
+Marionette threw an error: TypeError: browsingContextFn().currentWindowGlobal is null
+getMarionetteCommandsActorProxy/get/<@chrome://marionette/content/actors/MarionetteCommandsParent.jsm:332:29
+
+1616454843396	Marionette	INFO	Stopped listening on port 51333
+1616454930397	geckodriver	INFO	Listening on 127.0.0.1:51395
+1616454934982	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileVwzXCa"
+1616454936801	Marionette	INFO	Listening on port 51404
+1616454937030	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616454952765	Marionette	WARN	TimedPromise timed out after 500 ms: stacktrace:
+TimedPromise/<@chrome://marionette/content/sync.js:231:19
+TimedPromise@chrome://marionette/content/sync.js:216:10
+interaction.flushEventLoop@chrome://marionette/content/interaction.js:433:10
+webdriverClickElement@chrome://marionette/content/interaction.js:179:31
+JavaScript error: , line 0: NetworkError: A network error occurred.
+JavaScript error: , line 0: NetworkError: A network error occurred.
+[Parent 10456, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1616454958713	Marionette	INFO	Stopped listening on port 51404
+1616455088452	geckodriver	INFO	Listening on 127.0.0.1:51532
+1616455092639	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofileLHs9lV"
+1616455094523	Marionette	INFO	Listening on port 51540
+1616455094708	Marionette	WARN	TLS certificate errors will be ignored for this session
+1616455185177	geckodriver	INFO	Listening on 127.0.0.1:51673
+1616455188890	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofilepNg6xQ"
+JavaScript error: resource://activity-stream/lib/ASRouterNewTabHook.jsm, line 61: TypeError: this._router is null
+1616455197175	geckodriver	INFO	Listening on 127.0.0.1:51698
+1616455200870	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\jackk\\AppData\\Local\\Temp\\rust_mozprofilez9lZOE"
+1616455202625	Marionette	INFO	Listening on port 51706
+1616455202924	Marionette	WARN	TLS certificate errors will be ignored for this session
+console.error: "Could not get the list of font families" (new Error("Connection closed, pending request to server0.conn0.child3/pagestyle25, type getUsedFontFaces failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\ngetUsedFontFamilies/</<@resource://devtools/client/inspector/rules/models/element-style.js:229:46\npermitUnload@chrome://global/content/elements/browser-custom-element.js:1681:21\nCanCloseWindow@chrome://browser/content/browser.js:7761:36\nWindowIsClosing@chrome://browser/content/browser.js:7778:7\nBrowserTryToCloseWindow@chrome://browser/content/browser.js:3013:7\noncommand@chrome://browser/content/browser.xhtml:1:1\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.error: (new Error("Connection closed, pending request to server0.conn0.watcher4, type watchResources failed\n\nRequest stack:\nrequest@resource://devtools/shared/protocol/Front.js:288:14\ngenerateRequestMethods/</frontProto[name]@resource://devtools/shared/protocol/Front/FrontClassWithSpec.js:46:19\n_startListening@resource://devtools/shared/resources/resource-watcher.js:669:31\nwatchResources@resource://devtools/shared/resources/resource-watcher.js:149:20\npermitUnload@chrome://global/content/elements/browser-custom-element.js:1681:21\nCanCloseWindow@chrome://browser/content/browser.js:7761:36\nWindowIsClosing@chrome://browser/content/browser.js:7778:7\nBrowserTryToCloseWindow@chrome://browser/content/browser.js:3013:7\noncommand@chrome://browser/content/browser.xhtml:1:1\n", "resource://devtools/shared/protocol/Front.js", 99))
+console.error: "Tried to send a 'watchResources' method reply on an already destroyed actor 'watcher'"
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+IPDL protocol error: Handler returned error code!
+
+###!!! [Parent][DispatchAsyncMessage] Error: PLayerTransaction::Msg_ReleaseLayer Processing error: message was deserialized, but the handler returned false (indicating failure)
+
+SourceActor threw an exception: Error: Failed to fetch https://www.ebay.co.uk/sh/lst/active. Code 2147500036.
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:556:16
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 556, column: 16
+console.error: (new Error("Failed to fetch https://www.ebay.co.uk/sh/lst/active. Code 2147500036.", "resource://devtools/shared/DevToolsUtils.js", 556))
+SourceActor threw an exception: Error: Failed to fetch https://gha.ebay.co.uk/nproxy/notification/v1/getNotification?variation=dweb&GH&lang=en-GB&nb=1&_=1616455233707. Code 2147500036.
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:556:16
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 556, column: 16
+console.error: (new Error("Failed to fetch https://gha.ebay.co.uk/nproxy/notification/v1/getNotification?variation=dweb&GH&lang=en-GB&nb=1&_=1616455233707. Code 2147500036.", "resource://devtools/shared/DevToolsUtils.js", 556))
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 556: Error: Failed to fetch https://www.ebay.co.uk/sh/lst/active. Code 2147500036.
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 556: Error: Failed to fetch https://gha.ebay.co.uk/nproxy/notification/v1/getNotification?variation=dweb&GH&lang=en-GB&nb=1&_=1616455233707. Code 2147500036.
+[Parent 20920, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+1616455347509	Marionette	INFO	Stopped listening on port 51706
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
