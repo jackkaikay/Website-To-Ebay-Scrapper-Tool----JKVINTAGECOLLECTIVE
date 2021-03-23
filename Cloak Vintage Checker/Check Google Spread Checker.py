@@ -165,9 +165,13 @@ print(unavailable_list)
 print('https://docs.google.com/spreadsheets/d/1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ/edit?usp=drive_web&ouid=103549851300883063646')
 Delete_All_Data()
 Export_Data_To_Sheets()
-open('SoldItems.txt','a',encoding='utf-8').write(unavailable_list)
+open('SoldItems.txt','a',encoding='utf-8').write(str(unavailable_list))
 
 def EbayAuto(Items):
+    '''
+    :param Chck if list has items
+    :return: run blelow code  
+    '''
     Items = "(" + str(Items) + ")"
 
     options = webdriver.ChromeOptions()
