@@ -59,7 +59,7 @@ signIn2.click()
 
 driver.implicitly_wait(random.randint(4,7))
 itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
-itemList.send_keys("('249CLOAK', '24CLOAK', '250CLOAK')")
+itemList.send_keys("('', '')")
 time.sleep(random.randint(2,4))
 button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
 button.click()
