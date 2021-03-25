@@ -279,5 +279,5 @@ def RunAll():
     EbayAuto(unavailable_list)
 
 scheduler = BlockingScheduler()
-scheduler.add_job(RunAll, 'cron', hour='9,12,3,5,6,7,8,10')
+scheduler.add_job(RunAll, 'cron', hour='9,12,15,17,18,19,20,22')
 scheduler.start()
