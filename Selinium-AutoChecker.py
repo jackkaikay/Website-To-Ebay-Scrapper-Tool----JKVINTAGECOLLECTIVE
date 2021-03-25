@@ -4,12 +4,12 @@ from selenium import webdriver
 from pyvirtualdisplay import Display
 import undetected_chromedriver as uc
 
-
+'''
 driver = uc.Chrome()
 print(driver.execute_script('return navigator.webdriver'))
 driver.get('https://distilnetworks.com') # starts magic
 print(driver.execute_script('return navigator.webdriver'))
-
+'''
 '''
 profile = webdriver.FirefoxProfile('C:\\Users\\jackk\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\zhln8k0l.default-release')
 
@@ -48,7 +48,7 @@ driver.set_window_size(800,800)
 driver.set_window_position(0,0)
 
 '''
-unavailable_list = ['CW1','wc2']
+unavailable_list = []
 
 
 print(len(unavailable_list))
@@ -64,13 +64,13 @@ def EbayAuto(Items):
 
     if len(Items) == 1:
         print('running 1 ')
-        Items = "(" + str(Items) + ")"
-        driver.get("https://www.google.com")
+        bob = "(" + str(Items) + ")"
 
-    if 2 >= len(Items):
+    print(len(Items))
+    if len(Items) >= 2:
         print('running 2 ')
         Items = "(" + str(Items) + ")"
-        driver.get("https://www.cheese.com")
+
 
 
 EbayAuto(unavailable_list)

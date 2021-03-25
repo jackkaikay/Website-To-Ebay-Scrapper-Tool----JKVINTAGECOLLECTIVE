@@ -18,7 +18,6 @@ SAMPLE_RANGE_NAME = 'A1:AA100000'
 
 def RunAll():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
-
     # here enter the id of your google sheet
     SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
     SAMPLE_RANGE_NAME = 'A1:AA100000'
@@ -89,7 +88,6 @@ def RunAll():
             print('Item Sold')
 
     print(data)
-
 
     def Create_Service(client_secret_file, api_service_name, api_version, *scopes):
         global service
@@ -165,7 +163,7 @@ def RunAll():
             pass
         if len(Items) == 1:
             print("there is one item in this list")
-            Items = "(" + str(Items) + ")"
+            ItemsListOne = "(" + str(Items) + ")"
 
             driver = uc.Chrome()
             driver.get('https://distilnetworks.com')  # starts magic
@@ -193,7 +191,7 @@ def RunAll():
 
             driver.implicitly_wait(random.randint(4, 7))
             itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
-            itemList.send_keys(Items)
+            itemList.send_keys(ItemsListOne)
             time.sleep(random.randint(2, 4))
             button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
             button.click()
@@ -281,5 +279,5 @@ def RunAll():
     EbayAuto(unavailable_list)
 
 scheduler = BlockingScheduler()
-scheduler.add_job(RunAll, 'interval', hours=5)
+scheduler.add_job(RunAll, 'cron', hour='9,12,3,5,6,7,8,10')
 scheduler.start()
