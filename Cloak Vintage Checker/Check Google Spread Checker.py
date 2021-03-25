@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import time
 import random
-from selenium import webdriver
+import undetected_chromedriver as uc
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow,Flow
 from google.auth.transport.requests import Request
@@ -75,8 +75,6 @@ def product_available(link):
         return False
     return True
 
-
-
 unavailable_list = []
 for ind in data.index:
     code = data['Code'][ind]
@@ -88,9 +86,6 @@ for ind in data.index:
         print('Item Sold')
 
 print(data)
-
-
-
 
 
 def Create_Service(client_secret_file, api_service_name, api_version, *scopes):
@@ -121,7 +116,6 @@ def Create_Service(client_secret_file, api_service_name, api_version, *scopes):
     except Exception as e:
         print(e)
         # return None
-
 
 # change 'my_json_file.json' by your downloaded JSON file.
 Create_Service('credentials.json', 'sheets', 'v4', ['https://www.googleapis.com/auth/spreadsheets'])
@@ -167,27 +161,20 @@ open('SoldItems.txt','a',encoding='utf-8').write(str(unavailable_list))
 def EbayAuto(Items):
 
     if not Items:
-        pass
+
         print("No Items To Delete")
+        pass
     if len(Items) == 1:
         print("there is one item in this list")
         Items = "(" + str(Items) + ")"
 
-        options = webdriver.ChromeOptions()
-        options.add_argument("start-maximized")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
-        driver = webdriver.Chrome(options=options, executable_path=r'C:\Program Files (x86)\chromedriver.exe')
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-            "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
-        print(driver.execute_script("return navigator.userAgent;"))
+        driver = uc.Chrome()
+        driver.get('https://distilnetworks.com')  # starts magic
 
         driver.get("https://www.google.com")  #
         driver.implicitly_wait(random.randint(4, 6))
         driver.get("https://www.ebay.co.uk/sh/lst/active")
         driver.implicitly_wait(random.randint(4, 6))
-        driver.maximize_window()
         time.sleep(3)
 
         user = driver.find_element_by_id("userid")
@@ -220,41 +207,35 @@ def EbayAuto(Items):
         preEnd1.click()
         time.sleep(random.randint(6, 10))
 
-        preEnd2 = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
+        preEnd2 = driver.find_element_by_xpath(
+            "//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
         preEnd2.click()
         time.sleep(random.randint(6, 10))
 
-
-        radioButton = driver.find_element_by_xpath("/html/body/div[2]/div/div/div/table[3]/tbody/tr/td[2]/form/table/tbody/tr/td[2]/input[1]")
+        radioButton = driver.find_element_by_xpath(
+            "/html/body/div[2]/div/div/div/table[3]/tbody/tr/td[2]/form/table/tbody/tr/td[2]/input[1]")
         time.sleep(random.randint(6, 10))
         radioButton.click()
 
-        endButton = driver.find_element_by_xpath("/ html / body / div[2] / div / div / div / table[3] / tbody / tr / td[2] / form / input[5]")
+        endButton = driver.find_element_by_xpath(
+            "/ html / body / div[2] / div / div / div / table[3] / tbody / tr / td[2] / form / input[5]")
         time.sleep(random.randint(6, 10))
         endButton.click()
         print("1 Item Successfully Deleted")
 
         Delete_All_Data()
         Export_Data_To_Sheets()
-
-    else:
+    if 2 >= len(Items):
+        print("There are multiple items in this list")
         Items = "(" + str(Items) + ")"
 
-        options = webdriver.ChromeOptions()
-        options.add_argument("start-maximized")
-        options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        options.add_experimental_option('useAutomationExtension', False)
-        driver = webdriver.Chrome(options=options, executable_path=r'C:\Program Files (x86)\chromedriver.exe')
-        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-        driver.execute_cdp_cmd('Network.setUserAgentOverride', {
-            "userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
-        print(driver.execute_script("return navigator.userAgent;"))
+        driver = uc.Chrome()
+        driver.get('https://distilnetworks.com')  # starts magic
 
         driver.get("https://www.google.com")  #
         driver.implicitly_wait(random.randint(4, 6))
         driver.get("https://www.ebay.co.uk/sh/lst/active")
         driver.implicitly_wait(random.randint(4, 6))
-        driver.maximize_window()
         time.sleep(3)
 
         user = driver.find_element_by_id("userid")
@@ -287,7 +268,8 @@ def EbayAuto(Items):
         preEnd1.click()
         time.sleep(random.randint(6, 10))
 
-        preEnd2 = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
+        preEnd2 = driver.find_element_by_xpath(
+            "//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
         preEnd2.click()
         time.sleep(random.randint(6, 10))
 
@@ -302,5 +284,4 @@ def EbayAuto(Items):
 
 
 EbayAuto(unavailable_list)
-
 

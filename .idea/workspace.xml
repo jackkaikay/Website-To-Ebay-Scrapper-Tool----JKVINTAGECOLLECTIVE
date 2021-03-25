@@ -4,6 +4,7 @@
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Selinium-AutoChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selinium-AutoChecker.py" afterDir="false" />
@@ -35,7 +36,28 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../UNI Sockets Work" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Check Google Spread Checker">
+  <component name="RunManager" selected="Python.Selinium-AutoChecker">
+    <configuration name="Check Google Spread Checker rerun hourly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EbayScraper" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Checker" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Check Google Spread Checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,27 +121,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="get_unavailable_list (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="EbayScraper" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Checker/Old" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Checker/Old/get_unavailable_list.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="scrapeCloak - Mens" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -165,18 +166,18 @@
     <list>
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.Check Google Spread Checker" />
-      <item itemvalue="Python.get_unavailable_list (1)" />
       <item itemvalue="Python.scrapeCloak - Mens" />
       <item itemvalue="Python.scrapeCloak - Women" />
       <item itemvalue="Python.Selinium-AutoChecker" />
+      <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Check Google Spread Checker" />
         <item itemvalue="Python.Selinium-AutoChecker" />
+        <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
+        <item itemvalue="Python.Check Google Spread Checker" />
         <item itemvalue="Python.scrapeCloak - Women" />
         <item itemvalue="Python.scrapeCloak - Mens" />
-        <item itemvalue="Python.get_unavailable_list (1)" />
       </list>
     </recent_temporary>
   </component>

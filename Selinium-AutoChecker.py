@@ -1,7 +1,14 @@
 import time
 import random
 from selenium import webdriver
+from pyvirtualdisplay import Display
+import undetected_chromedriver as uc
 
+
+driver = uc.Chrome()
+print(driver.execute_script('return navigator.webdriver'))
+driver.get('https://distilnetworks.com') # starts magic
+print(driver.execute_script('return navigator.webdriver'))
 
 '''
 profile = webdriver.FirefoxProfile('C:\\Users\\jackk\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\zhln8k0l.default-release')
@@ -19,10 +26,16 @@ profile.update_preferences()
 driver = webdriver.Firefox(firefox_profile=profile,executable_path=r'C:\Program Files (x86)\geckodriver.exe' )
 '''
 
+'''
 options = webdriver.ChromeOptions()
 options.add_argument("start-maximized")
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
+options.add_argument('--disable-extensions')
+options.add_argument('--profile-directory=Default')
+options.add_argument("--incognito")
+options.add_argument("--disable-plugins-discovery");
+options.add_argument("--start-maximized")
 driver = webdriver.Chrome(options=options, executable_path=r'C:\Program Files (x86)\chromedriver.exe')
 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})
@@ -30,14 +43,44 @@ print(driver.execute_script("return navigator.userAgent;"))
 
 
 
+driver.delete_all_cookies()
+driver.set_window_size(800,800)
+driver.set_window_position(0,0)
+
+'''
+unavailable_list = ['CW1','wc2']
 
 
+print(len(unavailable_list))
+
+
+
+
+
+def EbayAuto(Items):
+    if not Items:
+        print("No Items To Delete")
+        pass
+
+    if len(Items) == 1:
+        print('running 1 ')
+        Items = "(" + str(Items) + ")"
+        driver.get("https://www.google.com")
+
+    if 2 >= len(Items):
+        print('running 2 ')
+        Items = "(" + str(Items) + ")"
+        driver.get("https://www.cheese.com")
+
+
+EbayAuto(unavailable_list)
+'''
 
 driver.get("https://www.google.com")#
+
 driver.implicitly_wait(random.randint(4,6))
 driver.get("https://www.ebay.co.uk/sh/lst/active")
 driver.implicitly_wait(random.randint(4,6))
-driver.maximize_window()
 time.sleep(3)
 
 user = driver.find_element_by_id("userid")
@@ -79,5 +122,5 @@ time.sleep(random.randint(6,10))
 endItems = driver.find_element_by_xpath("/html/body/div[2]/div/div/div/form[3]/table[3]/tbody/tr/td[2]/table/tbody/tr[2]/td[1]/input")
 endItems.click()
 
-
+'''
 
