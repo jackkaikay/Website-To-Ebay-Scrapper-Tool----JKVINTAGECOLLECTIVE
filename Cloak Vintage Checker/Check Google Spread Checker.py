@@ -166,7 +166,7 @@ def EbayAuto(Items):
         pass
     if len(Items) == 1:
         print("there is one item in this list")
-        Items = "(" + str(Items) + ")"
+        ItemsListOne = "(" + str(Items) + ")"
 
         driver = uc.Chrome()
         driver.get('https://distilnetworks.com')  # starts magic
@@ -193,7 +193,7 @@ def EbayAuto(Items):
 
         driver.implicitly_wait(random.randint(4, 7))
         itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
-        itemList.send_keys(Items)
+        itemList.send_keys(ItemsListOne)
         time.sleep(random.randint(2, 4))
         button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
         button.click()
@@ -225,7 +225,7 @@ def EbayAuto(Items):
 
         Delete_All_Data()
         Export_Data_To_Sheets()
-    if 2 >= len(Items):
+    if len(Items) >= 2:
         print("There are multiple items in this list")
         Items = "(" + str(Items) + ")"
 

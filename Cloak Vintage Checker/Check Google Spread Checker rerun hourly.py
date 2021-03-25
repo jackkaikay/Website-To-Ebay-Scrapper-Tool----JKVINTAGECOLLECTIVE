@@ -221,7 +221,7 @@ def RunAll():
 
             Delete_All_Data()
             Export_Data_To_Sheets()
-        if 2 >= len(Items):
+        if len(Items) >= 2:
             print("There are multiple items in this list")
             Items = "(" + str(Items) + ")"
 

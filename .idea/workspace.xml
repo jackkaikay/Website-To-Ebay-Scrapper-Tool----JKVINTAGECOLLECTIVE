@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Selinium-AutoChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selinium-AutoChecker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +33,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../UNI Sockets Work" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Selinium-AutoChecker">
+  <component name="RunManager" selected="Python.Check Google Spread Checker">
     <configuration name="Check Google Spread Checker rerun hourly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,9 +170,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Selinium-AutoChecker" />
-        <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
         <item itemvalue="Python.Check Google Spread Checker" />
+        <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
+        <item itemvalue="Python.Selinium-AutoChecker" />
         <item itemvalue="Python.scrapeCloak - Women" />
         <item itemvalue="Python.scrapeCloak - Mens" />
       </list>
