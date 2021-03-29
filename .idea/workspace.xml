@@ -5,6 +5,11 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Selinium-AutoChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Selinium-AutoChecker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,10 +35,10 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UNI Sockets Work" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../VectorCRMstart" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Check Google Spread Checker rerun hourly">
+  <component name="RunManager" selected="Python.Check Google Spread Checker">
     <configuration name="Check Google Spread Checker rerun hourly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,8 +175,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
         <item itemvalue="Python.Check Google Spread Checker" />
+        <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
         <item itemvalue="Python.Selinium-AutoChecker" />
         <item itemvalue="Python.scrapeCloak - Women" />
         <item itemvalue="Python.scrapeCloak - Mens" />

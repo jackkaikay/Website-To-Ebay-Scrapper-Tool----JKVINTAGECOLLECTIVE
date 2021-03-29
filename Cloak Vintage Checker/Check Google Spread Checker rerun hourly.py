@@ -10,6 +10,7 @@ from google.auth.transport.requests import Request
 import os
 import pickle
 from apscheduler.schedulers.blocking import BlockingScheduler
+from datetime import datetime
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 # here enter the id of your google sheet
@@ -133,6 +134,12 @@ def RunAll():
         ).execute()
         print('Sheet successfully Updated')
 
+    def PrintDateTime():
+        now = datetime.now()
+
+        current_time = now.strftime("%H:%M:%S")
+        print("Current Time =", current_time)
+
     def Delete_All_Data():
 
         body = {}
@@ -152,14 +159,15 @@ def RunAll():
         ).execute()
         print('Sheet successfully Updated')
 
-    print(unavailable_list)
-    print('https://docs.google.com/spreadsheets/d/1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ/edit?usp=drive_web&ouid=103549851300883063646')
-    open('SoldItems.txt','a',encoding='utf-8').write(str(unavailable_list))
+    print(unavailable_list)(unavailable_list))
 
+    print('https://docs.google.com/spreadsheets/d/1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ/edit?usp=drive_web&ouid=103549851300883063646')
+    open('SoldItems.txt','a',encoding='utf-8').write(str
     def EbayAuto(Items):
         if not Items:
 
             print("No Items To Delete")
+            PrintDateTime()
             pass
         if len(Items) == 1:
             print("there is one item in this list")
@@ -221,6 +229,7 @@ def RunAll():
 
             Delete_All_Data()
             Export_Data_To_Sheets()
+            PrintDateTime()
         if len(Items) >= 2:
             print("There are multiple items in this list")
             Items = "(" + str(Items) + ")"
@@ -275,9 +284,9 @@ def RunAll():
 
             Delete_All_Data()
             Export_Data_To_Sheets()
-
+            PrintDateTime()
     EbayAuto(unavailable_list)
 
 scheduler = BlockingScheduler()
-scheduler.add_job(RunAll, 'cron', hour='9,12,15,17,18,19,20,22')
+scheduler.add_job(RunAll, 'cron', hour='7,9,12,15,17,18,19,20,22')
 scheduler.start()

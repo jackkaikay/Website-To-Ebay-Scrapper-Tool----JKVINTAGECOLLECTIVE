@@ -4,12 +4,12 @@ from selenium import webdriver
 from pyvirtualdisplay import Display
 import undetected_chromedriver as uc
 
-'''
+
 driver = uc.Chrome()
 print(driver.execute_script('return navigator.webdriver'))
 driver.get('https://distilnetworks.com') # starts magic
 print(driver.execute_script('return navigator.webdriver'))
-'''
+
 '''
 profile = webdriver.FirefoxProfile('C:\\Users\\jackk\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\zhln8k0l.default-release')
 
@@ -48,7 +48,7 @@ driver.set_window_size(800,800)
 driver.set_window_position(0,0)
 
 '''
-unavailable_list = []
+unavailable_list = ['CW10','CW4']
 
 
 print(len(unavailable_list))
@@ -57,24 +57,6 @@ print(len(unavailable_list))
 
 
 
-def EbayAuto(Items):
-    if not Items:
-        print("No Items To Delete")
-        pass
-
-    if len(Items) == 1:
-        print('running 1 ')
-        bob = "(" + str(Items) + ")"
-
-    print(len(Items))
-    if len(Items) >= 2:
-        print('running 2 ')
-        Items = "(" + str(Items) + ")"
-
-
-
-EbayAuto(unavailable_list)
-'''
 
 driver.get("https://www.google.com")#
 
@@ -121,6 +103,4 @@ time.sleep(random.randint(6,10))
 
 endItems = driver.find_element_by_xpath("/html/body/div[2]/div/div/div/form[3]/table[3]/tbody/tr/td[2]/table/tbody/tr[2]/td[1]/input")
 endItems.click()
-
-'''
 
