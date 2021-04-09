@@ -94,29 +94,30 @@ def scrape_item_data(link_data):
         listing_price = listing_price + 3
 
     if float(price[1:]) > 10 and float(price[1:]) < 20:
-        listing_price = float(price[1:]) * 1.6
+        listing_price = float(price[1:]) * 1.42
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 20 and float(price[1:]) < 30:
-        listing_price = float(price[1:]) * 1.5
+        listing_price = float(price[1:]) * 1.37
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 30 and float(price[1:]) < 40:
-        listing_price = float(price[1:]) * 1.45
+        listing_price = float(price[1:]) * 1.32
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 40 and float(price[1:]) < 50:
-        listing_price = float(price[1:]) * 1.45
+        listing_price = float(price[1:]) * 1.27
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 50 and float(price[1:]) < 60:
-        listing_price = float(price[1:]) * 1.4
+        listing_price = float(price[1:]) * 1.27
         listing_price = listing_price + 3
     if float(price[1:]) >= 60 and float(price[1:]) < 70:
-        listing_price = float(price[1:]) * 1.4
+        listing_price = float(price[1:]) * 1.27
         listing_price = listing_price + 3
     if float(price[1:]) >= 70:
-        listing_price = float(price[1:]) * 1.35
+        listing_price = float(price[1:]) * 1.27
+        listing_price = listing_price + 3
 
     try:
         size = soup.find(id='SingleOptionSelector-0').option.attrs['value']

@@ -159,10 +159,10 @@ def RunAll():
         ).execute()
         print('Sheet successfully Updated')
 
-    print(unavailable_list)(unavailable_list))
+    print(unavailable_list)
 
     print('https://docs.google.com/spreadsheets/d/1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ/edit?usp=drive_web&ouid=103549851300883063646')
-    open('SoldItems.txt','a',encoding='utf-8').write(str
+
     def EbayAuto(Items):
         if not Items:
 
