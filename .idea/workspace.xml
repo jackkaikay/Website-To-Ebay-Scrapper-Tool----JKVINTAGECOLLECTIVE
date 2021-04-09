@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Upload v2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker rerun hourly.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/SoldItems.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage Checker/token_write.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/Cloak Vintage Inventory-Mens.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/Cloak Vintage Inventory-Mens.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/Cloak Vintage Inventory-Women.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Mens.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloak Vintage New/scrapeCloak - Women.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cloak upload 300.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cloth data scraping job 2 Dev/Checker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Cloth data scraping job 2 Dev/Checker.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +32,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.scrape">
+  <component name="RunManager" selected="Python.Checker">
     <configuration name="Check Google Spread Checker rerun hourly" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,7 +54,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Check Google Spread Checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Checker" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EbayScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -71,11 +62,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloak Vintage Checker" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Cloth data scraping job 2 Dev" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloak Vintage Checker/Check Google Spread Checker.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Cloth data scraping job 2 Dev/Checker.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -170,19 +161,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.Check Google Spread Checker" />
       <item itemvalue="Python.scrapeCloak - Mens" />
       <item itemvalue="Python.scrapeCloak - Women" />
       <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
       <item itemvalue="Python.scrape" />
+      <item itemvalue="Python.Checker" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Checker" />
         <item itemvalue="Python.scrape" />
         <item itemvalue="Python.Check Google Spread Checker rerun hourly" />
         <item itemvalue="Python.scrapeCloak - Women" />
         <item itemvalue="Python.scrapeCloak - Mens" />
-        <item itemvalue="Python.Check Google Spread Checker" />
       </list>
     </recent_temporary>
   </component>
