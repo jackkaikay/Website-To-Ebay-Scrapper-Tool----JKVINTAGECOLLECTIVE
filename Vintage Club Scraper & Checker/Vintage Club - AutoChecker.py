@@ -291,9 +291,8 @@ def RunAll():
 
 
 
-RunAll()
-'''
+
+
 scheduler = BlockingScheduler()
 scheduler.add_job(RunAll, 'cron', hour='7,9,12,15,17,18,19,20,22')
 scheduler.start()
-'''

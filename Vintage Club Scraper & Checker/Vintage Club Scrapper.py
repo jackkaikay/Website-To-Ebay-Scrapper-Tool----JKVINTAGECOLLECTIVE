@@ -136,25 +136,25 @@ def scrape_item_data(link_data):
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 20 and float(price[1:]) < 30:
-        listing_price = float(price[1:]) * 1.35
+        listing_price = float(price[1:]) * 1.27
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 30 and float(price[1:]) < 40:
-        listing_price = float(price[1:]) * 1.3
+        listing_price = float(price[1:]) * 1.2
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 40 and float(price[1:]) < 50:
-        listing_price = float(price[1:]) * 1.25
+        listing_price = float(price[1:]) * 1.17
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 50 and float(price[1:]) < 60:
-        listing_price = float(price[1:]) * 1.2
+        listing_price = float(price[1:]) * 1.12
         listing_price = listing_price + 3
     if float(price[1:]) >= 60 and float(price[1:]) < 70:
-        listing_price = float(price[1:]) * 1.15
+        listing_price = float(price[1:]) * 1.1
         listing_price = listing_price + 3
     if float(price[1:]) >= 70:
-        listing_price = float(price[1:]) * 1.1
+        listing_price = float(price[1:]) * 1.08
         listing_price = listing_price + 3
 
     image_div = soup.find('div', {

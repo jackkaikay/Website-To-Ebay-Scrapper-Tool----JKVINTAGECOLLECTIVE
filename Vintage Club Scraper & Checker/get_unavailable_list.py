@@ -1,5 +1,4 @@
 from os import system
-
 from numpy import fabs
 
 
