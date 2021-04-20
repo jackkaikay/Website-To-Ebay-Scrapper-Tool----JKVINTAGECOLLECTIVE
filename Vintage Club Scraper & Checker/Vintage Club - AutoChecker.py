@@ -263,10 +263,10 @@ def RunAll():
             itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
             itemList.send_keys(Items)
             time.sleep(random.randint(4, 7))
-            print('1')
-            button = driver.find_element_by_xpath("//*[@id='"'filters'"']/form/div[3]/button[1]")
+
+            button = driver.find_element_by_xpath("/html/body/div[6]/div[2]/div[1]/div/div[3]/div/div[1]/div/div[2]/div[1]/form/div[3]/button[1]")
             button.click()
-            print('2')
+
             time.sleep(random.randint(6, 10))
             selectAll = driver.find_element_by_xpath("//*[@id='"'shui-dt-checkall'"']")
             selectAll.click()

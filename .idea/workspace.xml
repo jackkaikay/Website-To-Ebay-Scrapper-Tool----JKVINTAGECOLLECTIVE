@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca8b0f3a-3e25-44ee-bc2d-4465c2019b8c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ebay Upload Template 300 VT v2.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ebay Upload Template 300 VT.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/Vintage Club - AutoChecker.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/Vintage Club - AutoChecker.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/Vintage Club Scrapper.py" beforeDir="false" afterPath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/Vintage Club Scrapper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/token.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/token.pickle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/token_write.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/Vintage Club Scraper &amp; Checker/token_write.pickle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
