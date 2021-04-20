@@ -84,9 +84,9 @@ def link_missed(link):
 
 
 def add_code(data):
-    for ind, prod in enumerate(data):
+    for ind, prod in enumerate(data):           
         prod['SKU'] = str(ind + 1)
-        prod['Code'] = str(ind + 1) + "VC"
+        prod['Code'] = str(ind + 1) + "VC" #Change this to extra "C" if another batch NOT NUMBERS
         prod['Title'] = prod['Title'] + ' ' + prod['Code']
 
     return data
