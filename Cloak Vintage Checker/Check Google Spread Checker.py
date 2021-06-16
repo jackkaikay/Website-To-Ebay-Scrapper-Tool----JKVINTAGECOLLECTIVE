@@ -14,7 +14,7 @@ import pickle
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 
 # here enter the id of your google sheet
-SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
+SAMPLE_SPREADSHEET_ID_input = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
 SAMPLE_RANGE_NAME = 'A1:AA100000'
 
 def main():
@@ -52,8 +52,8 @@ print(df)
 
 
 # change this by your sheet ID
-SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
-gsheetId = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
+SAMPLE_SPREADSHEET_ID_input = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
+gsheetId = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
 # change the range if needed
 SAMPLE_RANGE_NAME = 'A1:AA1000'
 
@@ -155,13 +155,12 @@ def Export_Data_To_Sheets():
 
 
 print(unavailable_list)
-print('https://docs.google.com/spreadsheets/d/1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ/edit?usp=drive_web&ouid=103549851300883063646')
+print('https://docs.google.com/spreadsheets/d/1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U/edit#gid=0')
 open('SoldItems.txt','a',encoding='utf-8').write(str(unavailable_list))
 
+
 def EbayAuto(Items):
-
     if not Items:
-
         print("No Items To Delete")
         pass
     if len(Items) == 1:
@@ -195,7 +194,8 @@ def EbayAuto(Items):
         itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
         itemList.send_keys(ItemsListOne)
         time.sleep(random.randint(2, 4))
-        button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
+        button = driver.find_element_by_xpath(
+            "/html/body/div[6]/div[2]/div[1]/div/div[3]/div/div[1]/div/div[2]/div[1]/form/div[3]/button[1]")
         button.click()
         time.sleep(random.randint(6, 10))
         selectAll = driver.find_element_by_xpath("//*[@id='"'shui-dt-checkall'"']")
@@ -252,12 +252,19 @@ def EbayAuto(Items):
         signIn2 = driver.find_element_by_id("sgnBt")
         signIn2.click()
 
-        driver.implicitly_wait(random.randint(4, 7))
+        time.sleep(5)
+        driver.implicitly_wait(10)
         itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
         itemList.send_keys(Items)
-        time.sleep(random.randint(2, 4))
-        button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
-        button.click()
+        time.sleep(random.randint(4, 7))
+
+        time.sleep(5)
+        driver.implicitly_wait(2.5)
+        button2 = driver.find_element_by_xpath(
+            "/html/body/div[6]/div[2]/div[1]/div/div[3]/div/div[1]/div/div[2]/div[1]/form/div[3]/button[1]")
+        driver.implicitly_wait(5)
+        button2.click()
+
         time.sleep(random.randint(6, 10))
         selectAll = driver.find_element_by_xpath("//*[@id='"'shui-dt-checkall'"']")
         selectAll.click()
@@ -280,6 +287,10 @@ def EbayAuto(Items):
 
         Delete_All_Data()
         Export_Data_To_Sheets()
+
+
+
+
 
 
 

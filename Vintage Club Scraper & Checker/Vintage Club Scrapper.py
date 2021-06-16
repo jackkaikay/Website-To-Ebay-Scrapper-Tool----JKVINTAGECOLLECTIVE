@@ -132,29 +132,29 @@ def scrape_item_data(link_data):
         listing_price = listing_price + 3
 
     if float(price[1:]) > 10 and float(price[1:]) < 20:
-        listing_price = float(price[1:]) * 1.45
+        listing_price = float(price[1:]) * 1.5
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 20 and float(price[1:]) < 30:
-        listing_price = float(price[1:]) * 1.27
+        listing_price = float(price[1:]) * 1.45
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 30 and float(price[1:]) < 40:
-        listing_price = float(price[1:]) * 1.2
+        listing_price = float(price[1:]) * 1.3
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 40 and float(price[1:]) < 50:
-        listing_price = float(price[1:]) * 1.17
+        listing_price = float(price[1:]) * 1.2
         listing_price = listing_price + 3
 
     if float(price[1:]) >= 50 and float(price[1:]) < 60:
-        listing_price = float(price[1:]) * 1.12
+        listing_price = float(price[1:]) * 1.2
         listing_price = listing_price + 3
     if float(price[1:]) >= 60 and float(price[1:]) < 70:
         listing_price = float(price[1:]) * 1.1
         listing_price = listing_price + 3
     if float(price[1:]) >= 70:
-        listing_price = float(price[1:]) * 1.08
+        listing_price = float(price[1:]) * 1.1
         listing_price = listing_price + 3
 
     image_div = soup.find('div', {
@@ -202,6 +202,7 @@ def scrape(link, item_cat):
         sleep(10)
 
         soup = get_soup(driver.page_source)
+        print(soup)
         if not soup:
             link_missed(link)
             print(f"unable to fetch link {link}")
@@ -209,17 +210,26 @@ def scrape(link, item_cat):
 
         div_list = soup.find_all('div', {'class': 'ProductItem'})
         color_list = get_color_list(soup)
+        print('Here 1')
         for div in div_list:
+            print('Here 2')
             a_tag = div.find('a')
             item_link = base_url + a_tag.attrs['href']
+            print(item_link)
             brand = div.find(
                 'p', {'class': 'ProductItem__Vendor Heading'}).text.strip()
+            print(brand)
             title = div.find(
                 'h2', {'class': 'ProductItem__Title Heading'}).text.strip()
+            print('5')
+            print(title + 'This')
             size = title.split("-")[-1]
+            print('6')
             color = get_color(title,color_list)
             price = div.find(
                 'span', {'class': 'ProductItem__Price'}).text.strip().replace(",", '')
+        else:
+            print('This Failed')
 
             yield (item_link, brand, color, size, price, item_cat, title)
 

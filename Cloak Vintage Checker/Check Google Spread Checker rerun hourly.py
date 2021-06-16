@@ -14,13 +14,13 @@ from datetime import datetime
 
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
 # here enter the id of your google sheet
-SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
+SAMPLE_SPREADSHEET_ID_input = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
 SAMPLE_RANGE_NAME = 'A1:AA100000'
 
 def RunAll():
     SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
     # here enter the id of your google sheet
-    SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
+    SAMPLE_SPREADSHEET_ID_input = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
     SAMPLE_RANGE_NAME = 'A1:AA100000'
 
     def main():
@@ -57,8 +57,8 @@ def RunAll():
     print(df)
 
     # change this by your sheet ID
-    SAMPLE_SPREADSHEET_ID_input = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
-    gsheetId = '1LPRV4RqIvVZ0EySNSmP4hRjmWRUj43ncfjgg9vOhvHQ'
+    SAMPLE_SPREADSHEET_ID_input = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
+    gsheetId = '1HvWqmC7GmIKHY2NR_tQsf2oHJW0_muDcOK2ryzAqB-U'
     # change the range if needed
     SAMPLE_RANGE_NAME = 'A1:AA1000'
     data = df
@@ -165,9 +165,8 @@ def RunAll():
 
     def EbayAuto(Items):
         if not Items:
-
             print("No Items To Delete")
-            PrintDateTime()
+
             pass
         if len(Items) == 1:
             print("there is one item in this list")
@@ -175,7 +174,6 @@ def RunAll():
 
             driver = uc.Chrome()
             driver.get('https://distilnetworks.com')  # starts magic
-
 
             driver.get("https://www.google.com")  #
             driver.implicitly_wait(random.randint(4, 6))
@@ -198,10 +196,12 @@ def RunAll():
             signIn2.click()
 
             driver.implicitly_wait(random.randint(4, 7))
-            itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
+            itemList = driver.find_element_by_xpath(
+                '//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
             itemList.send_keys(ItemsListOne)
             time.sleep(random.randint(2, 4))
-            button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
+            button = driver.find_element_by_xpath(
+                "/html/body/div[6]/div[2]/div[1]/div/div[3]/div/div[1]/div/div[2]/div[1]/form/div[3]/button[1]")
             button.click()
             time.sleep(random.randint(6, 10))
             selectAll = driver.find_element_by_xpath("//*[@id='"'shui-dt-checkall'"']")
@@ -213,23 +213,25 @@ def RunAll():
             preEnd1.click()
             time.sleep(random.randint(6, 10))
 
-            preEnd2 = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
+            preEnd2 = driver.find_element_by_xpath(
+                "//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
             preEnd2.click()
             time.sleep(random.randint(6, 10))
 
-
-            radioButton = driver.find_element_by_xpath("/html/body/div[2]/div/div/div/table[3]/tbody/tr/td[2]/form/table/tbody/tr/td[2]/input[1]")
+            radioButton = driver.find_element_by_xpath(
+                "/html/body/div[2]/div/div/div/table[3]/tbody/tr/td[2]/form/table/tbody/tr/td[2]/input[1]")
             time.sleep(random.randint(6, 10))
             radioButton.click()
 
-            endButton = driver.find_element_by_xpath("/ html / body / div[2] / div / div / div / table[3] / tbody / tr / td[2] / form / input[5]")
+            endButton = driver.find_element_by_xpath(
+                "/ html / body / div[2] / div / div / div / table[3] / tbody / tr / td[2] / form / input[5]")
             time.sleep(random.randint(6, 10))
             endButton.click()
             print("1 Item Successfully Deleted")
 
             Delete_All_Data()
             Export_Data_To_Sheets()
-            PrintDateTime()
+
         if len(Items) >= 2:
             print("There are multiple items in this list")
             Items = "(" + str(Items) + ")"
@@ -257,12 +259,20 @@ def RunAll():
             signIn2 = driver.find_element_by_id("sgnBt")
             signIn2.click()
 
-            driver.implicitly_wait(random.randint(4, 7))
-            itemList = driver.find_element_by_xpath('//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
+            time.sleep(5)
+            driver.implicitly_wait(10)
+            itemList = driver.find_element_by_xpath(
+                '//*[@id='"'s0-0-4-16-49-7-filters-advancedSearch[]-generic'"']/input')
             itemList.send_keys(Items)
-            time.sleep(random.randint(2, 4))
-            button = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-7-filters'"']/form/div[4]/button[1]")
-            button.click()
+            time.sleep(random.randint(4, 7))
+
+            time.sleep(5)
+            driver.implicitly_wait(2.5)
+            button2 = driver.find_element_by_xpath(
+                "/html/body/div[6]/div[2]/div[1]/div/div[3]/div/div[1]/div/div[2]/div[1]/form/div[3]/button[1]")
+            driver.implicitly_wait(5)
+            button2.click()
+
             time.sleep(random.randint(6, 10))
             selectAll = driver.find_element_by_xpath("//*[@id='"'shui-dt-checkall'"']")
             selectAll.click()
@@ -273,7 +283,8 @@ def RunAll():
             preEnd1.click()
             time.sleep(random.randint(6, 10))
 
-            preEnd2 = driver.find_element_by_xpath("//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
+            preEnd2 = driver.find_element_by_xpath(
+                "//*[@id='"'s0-0-4-16-49-bulkActionsV2-component-5-0-content-menu'"']/a[1]")
             preEnd2.click()
             time.sleep(random.randint(6, 10))
 
@@ -284,7 +295,8 @@ def RunAll():
 
             Delete_All_Data()
             Export_Data_To_Sheets()
-            PrintDateTime()
+
+
     EbayAuto(unavailable_list)
 
 scheduler = BlockingScheduler()
